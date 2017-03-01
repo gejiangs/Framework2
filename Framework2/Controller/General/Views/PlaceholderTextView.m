@@ -19,6 +19,7 @@
 -(void)awakeFromNib
 {
     [self initUI];
+    [super awakeFromNib];
 }
 
 -(id)init
@@ -37,9 +38,8 @@
     _placeholderLabel.textColor = RGB(200, 199, 204);
     _placeholderLabel.numberOfLines = 0;
     
-    self.delegate = self;
-    
     [self addSubview:_placeholderLabel];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textViewDidChange) name:UITextViewTextDidChangeNotification object:nil];
 }
 
 
@@ -53,20 +53,6 @@
     self.placeholderLabel.textColor = placeholderColor;
 }
 
--(void)textViewDidChange:(UITextView *)textView
-{
-    [self textViewDidChange];
-}
-
--(BOOL)textViewShouldEndEditing:(UITextView *)textView
-{
-    return YES;
-}
-
--(BOOL)textViewShouldBeginEditing:(UITextView *)textView
-{
-    return YES;
-}
 
 -(void)textViewDidChange
 {
@@ -84,5 +70,9 @@
     [self.placeholderLabel sizeToFit];//这一步很重要，不能遗忘
 }
 
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 @end
