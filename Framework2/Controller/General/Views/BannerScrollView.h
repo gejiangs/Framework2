@@ -52,7 +52,7 @@ typedef void(^ClickWithBlock)(NSInteger index);
 /**
  *  创建网络图片
  *
- *  @param imageNames    图片名字数组
+ *  @param imageUrls    图片名字数组
  *  @param block         点击block
  *  @return              创建网络图片，不自动切换
  */
@@ -61,7 +61,7 @@ typedef void(^ClickWithBlock)(NSInteger index);
 /**
  *  创建网络图片
  *
- *  @param imageNames   图片名字数组
+ *  @param imageUrls   图片名字数组
  *  @param block        点击block
  *  @param timeInterval 自动切换时间(0为不切换)
  *  @return             创建网络图片

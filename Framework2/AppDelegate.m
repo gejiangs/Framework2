@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "DownloadManager.h"
 
 @interface AppDelegate ()
 
@@ -47,5 +48,9 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-
+- (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(nonnull NSString *)identifier completionHandler:(nonnull void (^)())completionHandler
+{
+    NSLog(@"background:%@", identifier);
+    [[DownloadManager sharedManger] setBackgroundURLSession:identifier completion:completionHandler];
+}
 @end

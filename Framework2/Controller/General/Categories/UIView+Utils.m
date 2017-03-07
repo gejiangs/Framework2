@@ -241,9 +241,9 @@
     [self hiddenActivityView];
     
     MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self];
-    hud.labelText = labelText;
+    hud.label.text = labelText;
     [self addSubview:hud];
-    [hud show:YES];
+    [hud showAnimated:YES];
     return hud;
 }
 
@@ -253,11 +253,11 @@
     [self hiddenActivityView];
     
     MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self];
-    hud.labelText = labelText;
+    hud.label.text = labelText;
     hud.mode = MBProgressHUDModeText;
     [self addSubview:hud];
-    [hud show:YES];
-    [hud hide:YES afterDelay:delay];
+    [hud showAnimated:YES];
+    [hud hideAnimated:YES afterDelay:delay];
     
 }
 
@@ -278,8 +278,8 @@
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
     hud.customView = imageView;
     hud.mode = MBProgressHUDModeCustomView;
-    hud.labelText = text;
-    [hud hide:YES afterDelay:2.f];
+    hud.label.text = text;
+    [hud hideAnimated:YES afterDelay:2.f];
 }
 
 //隐藏加载提示
@@ -287,7 +287,7 @@
 {
     MBProgressHUD *hud = [MBProgressHUD HUDForView:self];
     if (hud != nil) {
-        [hud hide:YES];
+        [hud hideAnimated:YES];
     }
     
 }

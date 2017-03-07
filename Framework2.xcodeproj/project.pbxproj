@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		387F4F90421CCCF027ABEEA0 /* libPods-Framework2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DF272E067DDF4F4E8A5690A /* libPods-Framework2.a */; };
+		AD1063951E67C0C0009EDC15 /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1063941E67C0C0009EDC15 /* BaseRequest.m */; };
+		AD1C2BD21E6E4C7300328DD5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1C2BD11E6E4C7300328DD5 /* HomeViewController.m */; };
+		AD1C2BD51E6E4D3500328DD5 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1C2BD41E6E4D3500328DD5 /* DownloadManager.m */; };
 		EE6100101DABDE95004D0DD9 /* NSObject+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61FFDC1DABDE95004D0DD9 /* NSObject+Utils.m */; };
 		EE6100111DABDE95004D0DD9 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61FFDE1DABDE95004D0DD9 /* NSString+Utils.m */; };
 		EE6100121DABDE95004D0DD9 /* UIActionSheet+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61FFE01DABDE95004D0DD9 /* UIActionSheet+Utils.m */; };
@@ -31,7 +34,6 @@
 		EE6100251DABDE95004D0DD9 /* ToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6100081DABDE95004D0DD9 /* ToastView.m */; };
 		EE61FFC31DABDDEB004D0DD9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61FFC21DABDDEB004D0DD9 /* main.m */; };
 		EE61FFC61DABDDEB004D0DD9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61FFC51DABDDEB004D0DD9 /* AppDelegate.m */; };
-		EE61FFC91DABDDEB004D0DD9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61FFC81DABDDEB004D0DD9 /* ViewController.m */; };
 		EE61FFCC1DABDDEB004D0DD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE61FFCA1DABDDEB004D0DD9 /* Main.storyboard */; };
 		EE61FFCE1DABDDEB004D0DD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE61FFCD1DABDDEB004D0DD9 /* Assets.xcassets */; };
 		EE61FFD11DABDDEB004D0DD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE61FFCF1DABDDEB004D0DD9 /* LaunchScreen.storyboard */; };
@@ -41,6 +43,12 @@
 		2DF272E067DDF4F4E8A5690A /* libPods-Framework2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Framework2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46C561C29BBFA3BCCB31CBB1 /* Pods-Framework2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Framework2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Framework2/Pods-Framework2.debug.xcconfig"; sourceTree = "<group>"; };
 		522CC26F2F4FFA6618D58CDD /* Pods-Framework2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Framework2.release.xcconfig"; path = "Pods/Target Support Files/Pods-Framework2/Pods-Framework2.release.xcconfig"; sourceTree = "<group>"; };
+		AD1063931E67C0C0009EDC15 /* BaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRequest.h; sourceTree = "<group>"; };
+		AD1063941E67C0C0009EDC15 /* BaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRequest.m; sourceTree = "<group>"; };
+		AD1C2BD01E6E4C7300328DD5 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		AD1C2BD11E6E4C7300328DD5 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		AD1C2BD31E6E4D3500328DD5 /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
+		AD1C2BD41E6E4D3500328DD5 /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
 		AD88F8201E66C7A400C2B373 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		AD88F8211E66C82A00C2B373 /* AppMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppMacro.h; sourceTree = "<group>"; };
 		AD88F8221E66C82A00C2B373 /* AppServerMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppServerMacro.h; sourceTree = "<group>"; };
@@ -56,8 +64,6 @@
 		EE61FFC21DABDDEB004D0DD9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EE61FFC41DABDDEB004D0DD9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EE61FFC51DABDDEB004D0DD9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EE61FFC71DABDDEB004D0DD9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EE61FFC81DABDDEB004D0DD9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EE61FFCB1DABDDEB004D0DD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE61FFCD1DABDDEB004D0DD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE61FFD01DABDDEB004D0DD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -141,6 +147,8 @@
 		EE61000A1DABDE95004D0DD9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AD1C2BD01E6E4C7300328DD5 /* HomeViewController.h */,
+				AD1C2BD11E6E4C7300328DD5 /* HomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -172,6 +180,8 @@
 		EE61000E1DABDE95004D0DD9 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				AD1C2BD31E6E4D3500328DD5 /* DownloadManager.h */,
+				AD1C2BD41E6E4D3500328DD5 /* DownloadManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -179,6 +189,8 @@
 		EE61000F1DABDE95004D0DD9 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				AD1063931E67C0C0009EDC15 /* BaseRequest.h */,
+				AD1063941E67C0C0009EDC15 /* BaseRequest.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -218,8 +230,6 @@
 				EE61FFD81DABDE95004D0DD9 /* Controller */,
 				EE61FFC41DABDDEB004D0DD9 /* AppDelegate.h */,
 				EE61FFC51DABDDEB004D0DD9 /* AppDelegate.m */,
-				EE61FFC71DABDDEB004D0DD9 /* ViewController.h */,
-				EE61FFC81DABDDEB004D0DD9 /* ViewController.m */,
 				EE61FFCA1DABDDEB004D0DD9 /* Main.storyboard */,
 				EE61FFCD1DABDDEB004D0DD9 /* Assets.xcassets */,
 				EE61FFCF1DABDDEB004D0DD9 /* LaunchScreen.storyboard */,
@@ -349,11 +359,12 @@
 		EE61FFB61DABDDEB004D0DD9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "郭江";
 				TargetAttributes = {
 					EE61FFBD1DABDDEB004D0DD9 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = B4VX949QFW;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -442,8 +453,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE61FFC91DABDDEB004D0DD9 /* ViewController.m in Sources */,
 				EE61FFC61DABDDEB004D0DD9 /* AppDelegate.m in Sources */,
+				AD1063951E67C0C0009EDC15 /* BaseRequest.m in Sources */,
 				EE6100111DABDE95004D0DD9 /* NSString+Utils.m in Sources */,
 				EE6100141DABDE95004D0DD9 /* UIColor+Utils.m in Sources */,
 				EE61001B1DABDE95004D0DD9 /* BaseTableViewController.m in Sources */,
@@ -459,6 +470,7 @@
 				EE6100251DABDE95004D0DD9 /* ToastView.m in Sources */,
 				EE61001A1DABDE95004D0DD9 /* BaseTabBarController.m in Sources */,
 				EE6100131DABDE95004D0DD9 /* UIAlertView+Utils.m in Sources */,
+				AD1C2BD51E6E4D3500328DD5 /* DownloadManager.m in Sources */,
 				EE61FFC31DABDDEB004D0DD9 /* main.m in Sources */,
 				EE61001D1DABDE95004D0DD9 /* BaseWebViewController.m in Sources */,
 				EE6100191DABDE95004D0DD9 /* BaseNavigationViewController.m in Sources */,
@@ -466,6 +478,7 @@
 				EE61001F1DABDE95004D0DD9 /* BaseView.m in Sources */,
 				EE6100161DABDE95004D0DD9 /* UIImage+Utils.m in Sources */,
 				EE61001E1DABDE95004D0DD9 /* BannerScrollView.m in Sources */,
+				AD1C2BD21E6E4C7300328DD5 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +522,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -556,6 +570,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -584,9 +599,10 @@
 			baseConfigurationReference = 46C561C29BBFA3BCCB31CBB1 /* Pods-Framework2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B4VX949QFW;
 				GCC_PREFIX_HEADER = Framework2/PrefixHeader.pch;
 				INFOPLIST_FILE = Framework2/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gejiangs.Framework2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -598,9 +614,10 @@
 			baseConfigurationReference = 522CC26F2F4FFA6618D58CDD /* Pods-Framework2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B4VX949QFW;
 				GCC_PREFIX_HEADER = Framework2/PrefixHeader.pch;
 				INFOPLIST_FILE = Framework2/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gejiangs.Framework2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
