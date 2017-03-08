@@ -23,6 +23,16 @@
     if (self = [super init]) {
         self.sessionManager = [AFHTTPSessionManager manager];
         self.sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+        
+//        NSMutableSet *set = [[NSMutableSet alloc] initWithSet:self.sessionManager.responseSerializer.acceptableContentTypes];
+//        [set addObject:@"application/json"];
+//        [set addObject:@"text/json"];
+//        [set addObject:@"text/javascript"];
+//        [set addObject:@"text/html"];
+//        [set addObject:@"text/css"];
+//        [set addObject:@"text/plain"];
+//        
+//        self.sessionManager.responseSerializer.acceptableContentTypes = set;
     }
     return self;
 }
@@ -40,10 +50,15 @@
                  success:(successBlock)success
                  failure:(failureBlock)failure
 {
+    self.successHandler = success;
+    self.failureHandler = failure;
+    
     [self.sessionManager GET:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
+        NSLog(@"response:%@", responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        if (self.failureHandler) {
+            self.failureHandler(error);
+        }
     }];
 }
 
@@ -60,10 +75,15 @@
                   success:(successBlock)success
                   failure:(failureBlock)failure
 {
+    self.successHandler = success;
+    self.failureHandler = failure;
+    
     [self.sessionManager GET:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        if (self.failureHandler) {
+            self.failureHandler(error);
+        }
     }];
 }
 

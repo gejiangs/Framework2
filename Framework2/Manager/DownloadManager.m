@@ -32,7 +32,8 @@
 
 @interface DownloadManager ()
 
-@property (strong, nonatomic) NSMutableDictionary *completionHandlerDictionary;
+@property (nonatomic, strong)   NSMutableDictionary *completionHandlerDictionary;
+@property (nonatomic, strong)   NSMutableDictionary *tasks;
 
 @end
 
@@ -52,6 +53,8 @@
 {
     if (self = [super init]) {
         self.completionHandlerDictionary = [NSMutableDictionary dictionary];
+        self.tasks = [NSMutableDictionary dictionary];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillTerminate) name:UIApplicationWillTerminateNotification object:nil];
     }
     return self;
 }
@@ -83,7 +86,7 @@
     }];
     
     //请求
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString] cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:30];
     
     //下载Task操作
     NSURLSessionDownloadTask *task = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
@@ -120,6 +123,9 @@
     
     model.task = task;
     
+    
+    [self.tasks setObject:task forKey:urlString];
+    
     return model;
 }
 
@@ -130,6 +136,22 @@
     DownloadModel *model = [self addURL:urlString progress:progress completion:completion];
     [model resume];
     return model;
+}
+
+-(void)applicationWillTerminate
+{
+    NSMutableDictionary *resumeDict = [NSMutableDictionary dictionary];
+    NSArray *taskKeys = self.tasks.allKeys;
+    for (NSString *urlString in taskKeys) {
+        NSURLSessionDownloadTask *task = [self.tasks objectForKey:urlString];
+        [task cancelByProducingResumeData:^(NSData * _Nullable resumeData) {
+            NSLog(@"len:%lu", resumeData.length);
+//            [resumeDict setObject:resumeData forKey:urlString];
+        }];
+        NSLog(@"absoluteString:%@==%lld==%lld", urlString, task.countOfBytesReceived, task.countOfBytesExpectedToReceive);
+    }
+    
+//    [resumeDict writeToFile:<#(nonnull NSString *)#> atomically:<#(BOOL)#>];
 }
 
 @end

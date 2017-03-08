@@ -7,17 +7,9 @@
 //
 
 #import "HomeViewController.h"
-#import "DownloadManager.h"
 
 @interface HomeViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *progressLabel;
-@property (weak, nonatomic) IBOutlet UIProgressView *progressView;
-@property (nonatomic, strong)   DownloadModel *downloadModel;
 
-
-@property (weak, nonatomic) IBOutlet UILabel *progressLabel2;
-@property (weak, nonatomic) IBOutlet UIProgressView *progressView2;
-@property (nonatomic, strong)   DownloadModel *downloadModel2;
 
 @end
 
@@ -26,46 +18,43 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self initDownload];
-}
-
--(void)initDownload
-{
-    NSString *urlStirng1 = @"http://dldir1.qq.com/qqfile/QQforMac/QQ_V5.4.1.dmg";
-    self.downloadModel = [[DownloadManager sharedManger] addURL:urlStirng1 progress:^(CGFloat progress) {
-        self.progressView.progress = progress;
-        self.progressLabel.text = [NSString stringWithFormat:@"%0.2f%@", progress*100.f, @"%"];
-        NSLog(@"progress:%0.2f", progress);
-    } completion:^(NSURL *filePath) {
-        NSLog(@"filePath:%@", filePath);
-    }];
+    NSArray *array = @[@{@"title":@"后台下载", @"class":@"DownloadVC"},
+                       @{@"title":@"后台下载2(支持关闭程序断点下载)",@"class":@"DownloadVC2"}
+                       ];
     
-    NSString *urlStirng2 = @"http://static.tripbe.com/videofiles/20121214/9533522808.f4v.mp4";
-    self.downloadModel2 = [[DownloadManager sharedManger] addURL:urlStirng2 progress:^(CGFloat progress) {
-        self.progressView2.progress = progress;
-        self.progressLabel2.text = [NSString stringWithFormat:@"%0.2f%@", progress*100.f, @"%"];
-        NSLog(@"progress:%0.2f", progress);
-    } completion:^(NSURL *filePath) {
-        NSLog(@"filePath:%@", filePath);
-    }];
+    self.contentList = [NSMutableArray arrayWithArray:array];
 }
 
-- (IBAction)startAction:(UIButton *)sender
+
+
+#pragma mark UITableView dataSource
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (sender.tag == 1) {
-        [self.downloadModel resume];
-    }else if (sender.tag == 2){
-        [self.downloadModel2 resume];
-    }
+    return [self.contentList count];
 }
 
-- (IBAction)pauseAction:(UIButton *)sender
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (sender.tag == 1) {
-        [self.downloadModel suspend];
-    }else if (sender.tag == 2){
-        [self.downloadModel2 suspend];
+    static NSString *ident = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ident];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:ident];
     }
+    
+    cell.textLabel.text = [[self.contentList objectAtIndex:indexPath.row] objectForKey:@"title"];
+    return cell;
+}
+
+
+#pragma mark UITableView Delegate
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    NSString *className = [[self.contentList objectAtIndex:indexPath.row] objectForKey:@"class"];
+    
+    [self pushViewControllerName:className];
 }
 
 - (void)didReceiveMemoryWarning {

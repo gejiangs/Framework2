@@ -11,6 +11,13 @@
 		AD1063951E67C0C0009EDC15 /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1063941E67C0C0009EDC15 /* BaseRequest.m */; };
 		AD1C2BD21E6E4C7300328DD5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1C2BD11E6E4C7300328DD5 /* HomeViewController.m */; };
 		AD1C2BD51E6E4D3500328DD5 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1C2BD41E6E4D3500328DD5 /* DownloadManager.m */; };
+		ADFBE43A1E6FF15900E6585C /* AdRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFBE4391E6FF15900E6585C /* AdRequest.m */; };
+		ADFBE43D1E6FF18E00E6585C /* AdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFBE43C1E6FF18E00E6585C /* AdModel.m */; };
+		ADFBE4401E6FFAF900E6585C /* HSDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFBE43F1E6FFAF900E6585C /* HSDownloadManager.m */; };
+		ADFBE4481E6FFC7600E6585C /* DownloadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFBE4461E6FFC7600E6585C /* DownloadVC.m */; };
+		ADFBE4491E6FFC7600E6585C /* DownloadVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADFBE4471E6FFC7600E6585C /* DownloadVC.xib */; };
+		ADFBE44D1E70028200E6585C /* DownloadVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFBE44B1E70028200E6585C /* DownloadVC2.m */; };
+		ADFBE44E1E70028200E6585C /* DownloadVC2.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADFBE44C1E70028200E6585C /* DownloadVC2.xib */; };
 		EE6100101DABDE95004D0DD9 /* NSObject+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61FFDC1DABDE95004D0DD9 /* NSObject+Utils.m */; };
 		EE6100111DABDE95004D0DD9 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61FFDE1DABDE95004D0DD9 /* NSString+Utils.m */; };
 		EE6100121DABDE95004D0DD9 /* UIActionSheet+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61FFE01DABDE95004D0DD9 /* UIActionSheet+Utils.m */; };
@@ -53,6 +60,18 @@
 		AD88F8211E66C82A00C2B373 /* AppMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppMacro.h; sourceTree = "<group>"; };
 		AD88F8221E66C82A00C2B373 /* AppServerMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppServerMacro.h; sourceTree = "<group>"; };
 		AD88F8231E66C82A00C2B373 /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		ADFBE4381E6FF15900E6585C /* AdRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdRequest.h; sourceTree = "<group>"; };
+		ADFBE4391E6FF15900E6585C /* AdRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdRequest.m; sourceTree = "<group>"; };
+		ADFBE43B1E6FF18E00E6585C /* AdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdModel.h; sourceTree = "<group>"; };
+		ADFBE43C1E6FF18E00E6585C /* AdModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdModel.m; sourceTree = "<group>"; };
+		ADFBE43E1E6FFAF900E6585C /* HSDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSDownloadManager.h; sourceTree = "<group>"; };
+		ADFBE43F1E6FFAF900E6585C /* HSDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSDownloadManager.m; sourceTree = "<group>"; };
+		ADFBE4451E6FFC7600E6585C /* DownloadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadVC.h; sourceTree = "<group>"; };
+		ADFBE4461E6FFC7600E6585C /* DownloadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadVC.m; sourceTree = "<group>"; };
+		ADFBE4471E6FFC7600E6585C /* DownloadVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownloadVC.xib; sourceTree = "<group>"; };
+		ADFBE44A1E70028200E6585C /* DownloadVC2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadVC2.h; sourceTree = "<group>"; };
+		ADFBE44B1E70028200E6585C /* DownloadVC2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadVC2.m; sourceTree = "<group>"; };
+		ADFBE44C1E70028200E6585C /* DownloadVC2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownloadVC2.xib; sourceTree = "<group>"; };
 		EE6100001DABDE95004D0DD9 /* JamPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JamPickerView.m; sourceTree = "<group>"; };
 		EE6100011DABDE95004D0DD9 /* LockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockView.h; sourceTree = "<group>"; };
 		EE6100021DABDE95004D0DD9 /* LockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockView.m; sourceTree = "<group>"; };
@@ -134,6 +153,43 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		ADFBE4411E6FFC4000E6585C /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				ADFBE4421E6FFC4000E6585C /* Controller */,
+				ADFBE4431E6FFC4000E6585C /* Model */,
+				ADFBE4441E6FFC4000E6585C /* View */,
+			);
+			path = Download;
+			sourceTree = "<group>";
+		};
+		ADFBE4421E6FFC4000E6585C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ADFBE4451E6FFC7600E6585C /* DownloadVC.h */,
+				ADFBE4461E6FFC7600E6585C /* DownloadVC.m */,
+				ADFBE4471E6FFC7600E6585C /* DownloadVC.xib */,
+				ADFBE44A1E70028200E6585C /* DownloadVC2.h */,
+				ADFBE44B1E70028200E6585C /* DownloadVC2.m */,
+				ADFBE44C1E70028200E6585C /* DownloadVC2.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ADFBE4431E6FFC4000E6585C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ADFBE4441E6FFC4000E6585C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EE6100091DABDE95004D0DD9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +212,8 @@
 		EE61000B1DABDE95004D0DD9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ADFBE43B1E6FF18E00E6585C /* AdModel.h */,
+				ADFBE43C1E6FF18E00E6585C /* AdModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,6 +240,8 @@
 			children = (
 				AD1C2BD31E6E4D3500328DD5 /* DownloadManager.h */,
 				AD1C2BD41E6E4D3500328DD5 /* DownloadManager.m */,
+				ADFBE43E1E6FFAF900E6585C /* HSDownloadManager.h */,
+				ADFBE43F1E6FFAF900E6585C /* HSDownloadManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -191,6 +251,8 @@
 			children = (
 				AD1063931E67C0C0009EDC15 /* BaseRequest.h */,
 				AD1063941E67C0C0009EDC15 /* BaseRequest.m */,
+				ADFBE4381E6FF15900E6585C /* AdRequest.h */,
+				ADFBE4391E6FF15900E6585C /* AdRequest.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -253,6 +315,7 @@
 			children = (
 				EE61FFD91DABDE95004D0DD9 /* General */,
 				EE6100091DABDE95004D0DD9 /* Home */,
+				ADFBE4411E6FFC4000E6585C /* Download */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -392,6 +455,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADFBE4491E6FFC7600E6585C /* DownloadVC.xib in Resources */,
+				ADFBE44E1E70028200E6585C /* DownloadVC2.xib in Resources */,
 				EE61FFD11DABDDEB004D0DD9 /* LaunchScreen.storyboard in Resources */,
 				EE61FFCE1DABDDEB004D0DD9 /* Assets.xcassets in Resources */,
 				EE61FFCC1DABDDEB004D0DD9 /* Main.storyboard in Resources */,
@@ -458,15 +523,19 @@
 				EE6100111DABDE95004D0DD9 /* NSString+Utils.m in Sources */,
 				EE6100141DABDE95004D0DD9 /* UIColor+Utils.m in Sources */,
 				EE61001B1DABDE95004D0DD9 /* BaseTableViewController.m in Sources */,
+				ADFBE4401E6FFAF900E6585C /* HSDownloadManager.m in Sources */,
 				EE6100121DABDE95004D0DD9 /* UIActionSheet+Utils.m in Sources */,
+				ADFBE43A1E6FF15900E6585C /* AdRequest.m in Sources */,
 				EE6100211DABDE95004D0DD9 /* JamPickerView.m in Sources */,
 				EE6100221DABDE95004D0DD9 /* LockView.m in Sources */,
 				EE6100201DABDE95004D0DD9 /* ComboxPickerView.m in Sources */,
 				EE6100171DABDE95004D0DD9 /* UILabel+Utils.m in Sources */,
 				EE6100181DABDE95004D0DD9 /* UIView+Utils.m in Sources */,
+				ADFBE44D1E70028200E6585C /* DownloadVC2.m in Sources */,
 				EE6100231DABDE95004D0DD9 /* PlaceholderTextView.m in Sources */,
 				EE6100151DABDE95004D0DD9 /* UIImage+Resize.m in Sources */,
 				EE61001C1DABDE95004D0DD9 /* BaseViewController.m in Sources */,
+				ADFBE4481E6FFC7600E6585C /* DownloadVC.m in Sources */,
 				EE6100251DABDE95004D0DD9 /* ToastView.m in Sources */,
 				EE61001A1DABDE95004D0DD9 /* BaseTabBarController.m in Sources */,
 				EE6100131DABDE95004D0DD9 /* UIAlertView+Utils.m in Sources */,
@@ -474,6 +543,7 @@
 				EE61FFC31DABDDEB004D0DD9 /* main.m in Sources */,
 				EE61001D1DABDE95004D0DD9 /* BaseWebViewController.m in Sources */,
 				EE6100191DABDE95004D0DD9 /* BaseNavigationViewController.m in Sources */,
+				ADFBE43D1E6FF18E00E6585C /* AdModel.m in Sources */,
 				EE6100101DABDE95004D0DD9 /* NSObject+Utils.m in Sources */,
 				EE61001F1DABDE95004D0DD9 /* BaseView.m in Sources */,
 				EE6100161DABDE95004D0DD9 /* UIImage+Utils.m in Sources */,
