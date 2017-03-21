@@ -27,6 +27,12 @@
     return [self addLabelWithText:text font:font color:nil];
 }
 
+//当前view添加label,指定字体，系统颜色
+-(UILabel *)addLabelWithText:(NSString *)text fontSize:(int)fontSize
+{
+    return [self addLabelWithText:text font:[UIFont systemFontOfSize:fontSize] color:nil];
+}
+
 //当前view添加label,系统字体，指定颜色
 -(UILabel *)addLabelWithText:(NSString *)text color:(UIColor *)color
 {
@@ -131,6 +137,84 @@
     [self addSubview:scrollView];
     
     return scrollView;
+}
+
+//当前view添加UIImageView,指定imageName
+-(UIImageView *)addImageViewWithName:(NSString *)imageName
+{
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
+    [self addSubview:imageView];
+    
+    return imageView;
+}
+
+//当前view添加UISlider,指定delgate,SEL
+-(UISlider *)addSliderWithTarget:(id)target action:(SEL)sel
+{
+    UISlider *slider = [[UISlider alloc] init];
+    [slider addTarget:target action:sel forControlEvents:UIControlEventValueChanged];
+    [self addSubview:slider];
+    
+    return slider;
+}
+
+//当前view添加UISwitch,指定delgate,SEL
+-(UISwitch *)addSwithWithTarget:(id)target action:(SEL)sel
+{
+    UISwitch *s = [[UISwitch alloc] init];
+    [s addTarget:target action:sel forControlEvents:UIControlEventValueChanged];
+    [self addSubview:s];
+    
+    return s;
+}
+
+//当前view添加垂直UICollectionView,指定delgate
+-(UICollectionView *)addCollectionViewVerticalWithDelegate:(id)delegate
+{
+    return [self addCollectionViewWithDelegate:delegate scrollDirection:UICollectionViewScrollDirectionVertical];
+}
+
+//当前view添加水平UICollectionView,指定delgate
+-(UICollectionView *)addCollectionViewHorizontalWithDelegate:(id)delegate
+{
+    return [self addCollectionViewWithDelegate:delegate scrollDirection:UICollectionViewScrollDirectionHorizontal];
+}
+
+-(UICollectionView *)addCollectionViewWithDelegate:(id)delegate scrollDirection:(UICollectionViewScrollDirection)direction
+{
+    //初始化
+    UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
+    [flowLayout setScrollDirection:direction];
+    
+    UICollectionView *view = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:flowLayout];
+    view.delegate = delegate;
+    view.dataSource = delegate;
+    view.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleHeight;
+    view.backgroundColor = [UIColor clearColor];
+    view.scrollEnabled = NO;
+    [self addSubview:view];
+    
+    return view;
+}
+
+//当前view添加UIPageControl,指定target, SEL
+-(UIPageControl *)addPageControlWithTarget:(id)target selector:(SEL)sel
+{
+    UIPageControl *pageControl = [[UIPageControl alloc] init];
+    [pageControl addTarget:target action:sel forControlEvents:UIControlEventValueChanged];
+    [self addSubview:pageControl];
+    
+    return pageControl;
+}
+
+//当前view添加UIWebView,指定delgate
+-(UIWebView *)addWebViewWithDelegate:(id)delegate
+{
+    UIWebView *webView = [[UIWebView alloc] init];
+    webView.delegate = delegate;
+    [self addSubview:webView];
+    
+    return webView;
 }
 
 #pragma mark - 多view水平分布
@@ -241,9 +325,9 @@
     [self hiddenActivityView];
     
     MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self];
-    hud.label.text = labelText;
+    hud.labelText = labelText;
     [self addSubview:hud];
-    [hud showAnimated:YES];
+    [hud show:YES];
     return hud;
 }
 
@@ -253,11 +337,11 @@
     [self hiddenActivityView];
     
     MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self];
-    hud.label.text = labelText;
+    hud.labelText = labelText;
     hud.mode = MBProgressHUDModeText;
     [self addSubview:hud];
-    [hud showAnimated:YES];
-    [hud hideAnimated:YES afterDelay:delay];
+    [hud show:YES];
+    [hud hide:YES afterDelay:delay];
     
 }
 
@@ -278,8 +362,8 @@
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
     hud.customView = imageView;
     hud.mode = MBProgressHUDModeCustomView;
-    hud.label.text = text;
-    [hud hideAnimated:YES afterDelay:2.f];
+    hud.labelText = text;
+    [hud hide:YES afterDelay:2.f];
 }
 
 //隐藏加载提示
@@ -287,7 +371,7 @@
 {
     MBProgressHUD *hud = [MBProgressHUD HUDForView:self];
     if (hud != nil) {
-        [hud hideAnimated:YES];
+        [hud hide:YES];
     }
     
 }
@@ -342,4 +426,15 @@
     return self;
 }
 
+//返回当前view的VC控制器
+-(UIViewController *)mainViewController
+{
+    for (UIView* next = [self superview]; next; next = next.superview) {
+        UIResponder* nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController *)nextResponder;
+        }
+    }
+    return nil;
+}
 @end

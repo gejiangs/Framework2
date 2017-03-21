@@ -9,13 +9,13 @@
 
 /*
  [view1 remakeConstraints:^(MASConstraintMaker *make) {
-     make.top.equalTo(self.mas_bottom).offset(SPACE_Y);
-     make.centerY.equalTo(@[view2]);
-     make.size.mas_equalTo(CGSizeMake(140, 45));
+ make.top.equalTo(self.mas_bottom).offset(SPACE_Y);
+ make.centerY.equalTo(@[view2]);
+ make.size.mas_equalTo(CGSizeMake(140, 45));
  }];
  
  [view2 remakeConstraints:^(MASConstraintMaker *make) {
-     make.size.mas_equalTo(CGSizeMake(140, 45));
+ make.size.mas_equalTo(CGSizeMake(140, 45));
  }];
  
  //多view水平居中对齐
@@ -40,6 +40,9 @@
 //当前view添加label,指定字体，系统颜色
 -(UILabel *)addLabelWithText:(NSString *)text font:(UIFont *)font;
 
+//当前view添加label,指定字体，系统颜色
+-(UILabel *)addLabelWithText:(NSString *)text fontSize:(int)fontSize;
+
 //当前view添加label,系统字体，指定颜色
 -(UILabel *)addLabelWithText:(NSString *)text color:(UIColor *)color;
 
@@ -63,6 +66,27 @@
 
 //当前view添加UIScrollView,指定delegate
 -(UIScrollView *)addScrollViewWithDelegate:(id)delegate;
+
+//当前view添加UIImageView,指定imageName
+-(UIImageView *)addImageViewWithName:(NSString *)imageName;
+
+//当前view添加UISlider,指定delgate,SEL
+-(UISlider *)addSliderWithTarget:(id)target action:(SEL)sel;
+
+//当前view添加UISwitch,指定delgate,SEL
+-(UISwitch *)addSwithWithTarget:(id)target action:(SEL)sel;
+
+//当前view添加垂直UICollectionView,指定delgate
+-(UICollectionView *)addCollectionViewVerticalWithDelegate:(id)delegate;
+
+//当前view添加水平UICollectionView,指定delgate
+-(UICollectionView *)addCollectionViewHorizontalWithDelegate:(id)delegate;
+
+//当前view添加UIPageControl,指定target, SEL
+-(UIPageControl *)addPageControlWithTarget:(id)target selector:(SEL)sel;
+
+//当前view添加UIWebView,指定delgate
+-(UIWebView *)addWebViewWithDelegate:(id)delegate;
 
 //多view水平居中对齐（参考顶部）
 - (void) distributeSpacingHorizontallyWith:(NSArray*)views;
@@ -106,8 +130,8 @@
 //设置view圆角
 -(instancetype)cornerRadius:(CGFloat)radius;
 
-
-
+//返回当前view的VC控制器
+-(UIViewController *)mainViewController;
 
 
 

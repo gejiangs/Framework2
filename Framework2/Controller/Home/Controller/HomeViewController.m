@@ -19,10 +19,20 @@
     [super viewDidLoad];
     
     NSArray *array = @[@{@"title":@"后台下载", @"class":@"DownloadVC"},
-                       @{@"title":@"后台下载2(支持关闭程序断点下载)",@"class":@"DownloadVC2"}
+                       @{@"title":@"后台下载2(支持关闭程序断点下载)",@"class":@"DownloadVC2"},
+                       @{@"title":@"Collection",@"class":@"CollectionVC"}
                        ];
     
     self.contentList = [NSMutableArray arrayWithArray:array];
+    
+//    UIView *bottomView = [UIView new];
+//    bottomView.backgroundColor = [UIColor grayColor];
+//    [self.navigationController.view addSubview:bottomView];
+//    
+//    [bottomView makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.bottom.right.offset(0);
+//        make.height.offset(100);
+//    }];
 }
 
 
