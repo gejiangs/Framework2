@@ -36,6 +36,11 @@
 #define IOSVersion7Later                    (IOSVersion >= 7.0)
 #define IOSVersion8Later                    (IOSVersion >= 8.0)
 
+#define Phone3_5                            ScreenHeight == 480
+#define Phone4_0                            ScreenHeight == 568
+#define Phone4_7                            ScreenHeight == 667
+#define Phone5_5                            ScreenHeight == 736
+
 #define Rect(x, y, w, h)                    CGRectMake(x, y, w, h)
 #define Size(w, h)                          CGSizeMake(w, h)
 #define Point(x, y)                         CGPointMake(x, y)
@@ -54,5 +59,12 @@
 #define STRONGSELF                          __strong    __typeof(weakSelf)  strongSelf = weakSelf;
 
 #define DateFormatter                       [[RootManager sharedManager] dateFormatter]
+
+#define AppColorMain                        RGB(0, 0, 0)                //主题颜色
+#define AppColorGreen                       RGB(52, 168, 0)
+#define AppColorRed                         RGB(255, 39, 39)
+#define AppColorBlue                        RGB(15, 165, 247)
+#define AppColorOrange                      RGB(255,120,29)
+#define AppColorGray                        RGB(200, 200, 200)
 
 #endif

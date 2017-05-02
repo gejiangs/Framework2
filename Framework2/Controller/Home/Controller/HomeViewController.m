@@ -20,7 +20,9 @@
     
     NSArray *array = @[@{@"title":@"后台下载", @"class":@"DownloadVC"},
                        @{@"title":@"后台下载2(支持关闭程序断点下载)",@"class":@"DownloadVC2"},
-                       @{@"title":@"Collection",@"class":@"CollectionVC"}
+                       @{@"title":@"Collection",@"class":@"CollectionVC"},
+                       @{@"title":@"ClircleView",@"class":@"ClircleVC"},
+                       @{@"title":@"视频播放",@"class":@"VideoVC"}
                        ];
     
     self.contentList = [NSMutableArray arrayWithArray:array];
@@ -35,7 +37,23 @@
 //    }];
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
 
+{
+    
+    return UIStatusBarStyleLightContent;
+    
+    //UIStatusBarStyleDefault = 0 黑色文字，浅色背景时使用
+    
+    //UIStatusBarStyleLightContent = 1 白色文字，深色背景时使用
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
 
 #pragma mark UITableView dataSource
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
