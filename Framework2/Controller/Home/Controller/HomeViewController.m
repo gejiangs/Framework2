@@ -22,7 +22,8 @@
                        @{@"title":@"后台下载2(支持关闭程序断点下载)",@"class":@"DownloadVC2"},
                        @{@"title":@"Collection",@"class":@"CollectionVC"},
                        @{@"title":@"ClircleView",@"class":@"ClircleVC"},
-                       @{@"title":@"视频播放",@"class":@"VideoVC"}
+                       @{@"title":@"视频播放",@"class":@"VideoVC"},
+                       @{@"title":@"视频播放2",@"class":@"VideoVC2"}
                        ];
     
     self.contentList = [NSMutableArray arrayWithArray:array];
