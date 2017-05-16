@@ -22,6 +22,8 @@
 		AD4A3D571EB8261F0019AD0F /* KRVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4A3D461EB8261F0019AD0F /* KRVideoPlayerController.m */; };
 		AD4A3D581EB8261F0019AD0F /* KRVideoPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4A3D481EB8261F0019AD0F /* KRVideoPlayerControlView.m */; };
 		AD4A3D5B1EB826520019AD0F /* VideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4A3D5A1EB826520019AD0F /* VideoVC.m */; };
+		AD4E00BB1ECAEFC100AB683B /* IJKVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4E00BA1ECAEFC100AB683B /* IJKVideoPlayerView.m */; };
+		AD4E00BE1ECB01D200AB683B /* VideoVC3.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4E00BD1ECB01D200AB683B /* VideoVC3.m */; };
 		AD50E1371EC9911600C31867 /* FastForwardView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD50E1301EC9911600C31867 /* FastForwardView.m */; };
 		AD50E1381EC9911600C31867 /* FastForwardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD50E1311EC9911600C31867 /* FastForwardView.xib */; };
 		AD50E1391EC9911600C31867 /* WMLightView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD50E1331EC9911600C31867 /* WMLightView.m */; };
@@ -106,6 +108,10 @@
 		AD4A3D481EB8261F0019AD0F /* KRVideoPlayerControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KRVideoPlayerControlView.m; sourceTree = "<group>"; };
 		AD4A3D591EB826520019AD0F /* VideoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoVC.h; sourceTree = "<group>"; };
 		AD4A3D5A1EB826520019AD0F /* VideoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoVC.m; sourceTree = "<group>"; };
+		AD4E00B91ECAEFC100AB683B /* IJKVideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJKVideoPlayerView.h; sourceTree = "<group>"; };
+		AD4E00BA1ECAEFC100AB683B /* IJKVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJKVideoPlayerView.m; sourceTree = "<group>"; };
+		AD4E00BC1ECB01D200AB683B /* VideoVC3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoVC3.h; sourceTree = "<group>"; };
+		AD4E00BD1ECB01D200AB683B /* VideoVC3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoVC3.m; sourceTree = "<group>"; };
 		AD50E12F1EC9911600C31867 /* FastForwardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastForwardView.h; sourceTree = "<group>"; };
 		AD50E1301EC9911600C31867 /* FastForwardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastForwardView.m; sourceTree = "<group>"; };
 		AD50E1311EC9911600C31867 /* FastForwardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FastForwardView.xib; sourceTree = "<group>"; };
@@ -352,6 +358,8 @@
 				AD4A3D5A1EB826520019AD0F /* VideoVC.m */,
 				AD5ED4DB1EC1908400F70DA6 /* VideoVC2.h */,
 				AD5ED4DC1EC1908400F70DA6 /* VideoVC2.m */,
+				AD4E00BC1ECB01D200AB683B /* VideoVC3.h */,
+				AD4E00BD1ECB01D200AB683B /* VideoVC3.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -378,6 +386,8 @@
 				AD381CEA1E81130B00AEA234 /* HomeBannerView.m */,
 				AD1561871EAEE1910086B874 /* ClircleHeaderView.h */,
 				AD1561881EAEE1910086B874 /* ClircleHeaderView.m */,
+				AD4E00B91ECAEFC100AB683B /* IJKVideoPlayerView.h */,
+				AD4E00BA1ECAEFC100AB683B /* IJKVideoPlayerView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -684,6 +694,7 @@
 				AD1063951E67C0C0009EDC15 /* BaseRequest.m in Sources */,
 				AD381CE81E81088600AEA234 /* HomeCollectionCell.m in Sources */,
 				EE6100111DABDE95004D0DD9 /* NSString+Utils.m in Sources */,
+				AD4E00BE1ECB01D200AB683B /* VideoVC3.m in Sources */,
 				EE6100141DABDE95004D0DD9 /* UIColor+Utils.m in Sources */,
 				EE61001B1DABDE95004D0DD9 /* BaseTableViewController.m in Sources */,
 				ADFBE4401E6FFAF900E6585C /* HSDownloadManager.m in Sources */,
@@ -706,6 +717,7 @@
 				ADFBE4481E6FFC7600E6585C /* DownloadVC.m in Sources */,
 				AD5ED4DD1EC1908400F70DA6 /* VideoVC2.m in Sources */,
 				AD4A3D571EB8261F0019AD0F /* KRVideoPlayerController.m in Sources */,
+				AD4E00BB1ECAEFC100AB683B /* IJKVideoPlayerView.m in Sources */,
 				AD50E13B1EC9911600C31867 /* WMPlayer.m in Sources */,
 				EE6100251DABDE95004D0DD9 /* ToastView.m in Sources */,
 				EE61001A1DABDE95004D0DD9 /* BaseTabBarController.m in Sources */,

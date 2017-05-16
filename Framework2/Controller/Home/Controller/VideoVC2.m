@@ -8,6 +8,7 @@
 
 #import "VideoVC2.h"
 #import "WMPlayer.h"
+#import "IJKVideoPlayerView.h"
 
 @interface VideoVC2 ()
 
@@ -26,15 +27,47 @@
 //    
 //    [player showInView:self.view];
     
-    WMPlayer *wmPlayer = [[WMPlayer alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenWidth/16*9)];
+//    WMPlayer *wmPlayer = [[WMPlayer alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenWidth/16*9)];
+//    
+////    [wmPlayer setURLString:@"http://static.tripbe.com/videofiles/20121214/9533522808.f4v.mp4"];
+//    [wmPlayer setURLString:@"http://119.147.144.58:8088/rsfile/songs/1.flv"];
+//    
+//    [self.view addSubview:wmPlayer];
+//    
+//    [wmPlayer play];
     
-//    [wmPlayer setURLString:@"http://static.tripbe.com/videofiles/20121214/9533522808.f4v.mp4"];
-    [wmPlayer setURLString:@"http://119.147.144.58:8088/rsfile/songs/1.flv"];
+    IJKVideoPlayerView *playerView = [[IJKVideoPlayerView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenWidth/16*9)
+                                                                     urlString:@"http://119.147.144.58:8088/rsfile/songs/1.flv"];
+    [self.view addSubview:playerView];
     
-    [self.view addSubview:wmPlayer];
     
-    [wmPlayer play];
+    UIButton *back = [self.view addButtonWithTitle:@"返回" target:self action:@selector(backAction)];
+    [self.view addSubview:back];
+    [back makeConstraints:^(MASConstraintMaker *make) {
+        make.left.offset(10);
+        make.bottom.offset(-10);
+    }];
 }
+
+-(void)backAction
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
