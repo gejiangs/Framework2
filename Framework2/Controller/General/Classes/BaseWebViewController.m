@@ -24,7 +24,7 @@
     
     [self.webView loadRequest:request];
     
-    [self.view showActivityView:@"正在加载..."];
+    [self.view showHUDText:@"正在加载..."];
     
 }
 
@@ -53,7 +53,7 @@
 }
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    [self.view hiddenActivityView];
+    [self.view hiddenHUD];
     
     NSString *title = [self.webView stringByEvaluatingJavaScriptFromString:@"document.title"];
     self.title = title;
@@ -61,7 +61,7 @@
 }
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
-    [self.view hiddenActivityView];
+    [self.view hiddenHUD];
 }
 
 - (void)didReceiveMemoryWarning {
