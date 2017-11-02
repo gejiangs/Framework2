@@ -24,7 +24,8 @@
                        @{@"title":@"ClircleView",@"class":@"ClircleVC"},
                        @{@"title":@"视频播放",@"class":@"VideoVC"},
                        @{@"title":@"视频播放2",@"class":@"VideoVC2"},
-                       @{@"title":@"视频播放3",@"class":@"VideoVC3"}
+                       @{@"title":@"视频播放3",@"class":@"VideoVC3"},
+                       @{@"title":@"TouchID",@"class":@"TouchIDViewController"}
                        ];
     
     self.contentList = [NSMutableArray arrayWithArray:array];

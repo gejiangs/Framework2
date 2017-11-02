@@ -13,6 +13,7 @@
 		AD15618C1EAEE1C00086B874 /* ClircleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD15618B1EAEE1C00086B874 /* ClircleVC.m */; };
 		AD1C2BD21E6E4C7300328DD5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1C2BD11E6E4C7300328DD5 /* HomeViewController.m */; };
 		AD1C2BD51E6E4D3500328DD5 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1C2BD41E6E4D3500328DD5 /* DownloadManager.m */; };
+		AD28C7D91FAAF51B0065A455 /* TouchIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD28C7D81FAAF51B0065A455 /* TouchIDViewController.m */; };
 		AD381CE21E8107D300AEA234 /* CollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD381CE11E8107D300AEA234 /* CollectionVC.m */; };
 		AD381CE51E81080000AEA234 /* HomeCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD381CE41E81080000AEA234 /* HomeCollectionView.m */; };
 		AD381CE81E81088600AEA234 /* HomeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD381CE71E81088600AEA234 /* HomeCollectionCell.m */; };
@@ -93,6 +94,8 @@
 		AD1C2BD11E6E4C7300328DD5 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		AD1C2BD31E6E4D3500328DD5 /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
 		AD1C2BD41E6E4D3500328DD5 /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
+		AD28C7D71FAAF51B0065A455 /* TouchIDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchIDViewController.h; sourceTree = "<group>"; };
+		AD28C7D81FAAF51B0065A455 /* TouchIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchIDViewController.m; sourceTree = "<group>"; };
 		AD381CE01E8107D300AEA234 /* CollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionVC.h; sourceTree = "<group>"; };
 		AD381CE11E8107D300AEA234 /* CollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionVC.m; sourceTree = "<group>"; };
 		AD381CE31E81080000AEA234 /* HomeCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionView.h; sourceTree = "<group>"; };
@@ -367,6 +370,8 @@
 				AD5ED4DC1EC1908400F70DA6 /* VideoVC2.m */,
 				AD4E00BC1ECB01D200AB683B /* VideoVC3.h */,
 				AD4E00BD1ECB01D200AB683B /* VideoVC3.m */,
+				AD28C7D71FAAF51B0065A455 /* TouchIDViewController.h */,
+				AD28C7D81FAAF51B0065A455 /* TouchIDViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -700,6 +705,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE61FFC61DABDDEB004D0DD9 /* AppDelegate.m in Sources */,
+				AD28C7D91FAAF51B0065A455 /* TouchIDViewController.m in Sources */,
 				AD1063951E67C0C0009EDC15 /* BaseRequest.m in Sources */,
 				AD381CE81E81088600AEA234 /* HomeCollectionCell.m in Sources */,
 				EE6100111DABDE95004D0DD9 /* NSString+Utils.m in Sources */,
