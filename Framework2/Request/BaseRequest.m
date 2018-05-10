@@ -119,7 +119,82 @@
                   success:(successBlock)success
                   failure:(failureBlock)failure
 {
-    [self.sessionManager uploadTaskWithRequest:<#(nonnull NSURLRequest *)#> fromData:<#(nullable NSData *)#> progress:<#^(NSProgress * _Nonnull uploadProgress)uploadProgressBlock#> completionHandler:<#^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error)completionHandler#>]
+    
+    [self uploadImageWithURL:urlString params:params files:@[file] progress:nil success:success failure:failure];
+}
+
+
+/**
+ http 上传图片
+
+ @param urlString url地址
+ @param params 参数
+ @param file 文件对象
+ @param progress 上传进度
+ @param success 成功block
+ @param failure 失败block
+ */
+-(void)uploadImageWithURL:(NSString *)urlString
+                   params:(NSDictionary *)params
+                     file:(RequestFileModel *)file
+                 progress:(progress)progress
+                  success:(successBlock)success
+                  failure:(failureBlock)failure
+{
+    [self uploadImageWithURL:urlString params:params files:@[file] progress:progress success:success failure:failure];
+}
+
+
+/**
+ http 上传图片
+ 
+ @param urlString url地址
+ @param params 参数
+ @param files 文件对象数组
+ @param progress 上传进度
+ @param success 成功block
+ @param failure 失败block
+ */
+-(void)uploadImageWithURL:(NSString *)urlString
+                   params:(NSDictionary *)params
+                    files:(NSArray<RequestFileModel*> *)files
+                 progress:(progress)progress
+                  success:(successBlock)success
+                  failure:(failureBlock)failure
+{
+    void(^bodyWithBlock)(id<AFMultipartFormData> formData)= ^(id<AFMultipartFormData> formData){
+        for (RequestFileModel *model in files) {
+            [formData appendPartWithFileData:model.fileData
+                                        name:model.name
+                                    fileName:model.fileName
+                                    mimeType:model.mimeType];
+        }
+    };
+    
+    AFHTTPRequestSerializer <AFURLRequestSerialization> * requestSerializer = [AFHTTPRequestSerializer serializer];
+    NSMutableURLRequest *request = [requestSerializer multipartFormRequestWithMethod:@"POST"
+                                                                           URLString:[[NSURL URLWithString:urlString] absoluteString]
+                                                                          parameters:params
+                                                           constructingBodyWithBlock:bodyWithBlock
+                                                                               error:nil];
+    
+    NSURLSessionUploadTask *task = [self.sessionManager uploadTaskWithStreamedRequest:request progress:^(NSProgress * _Nonnull uploadProgress) {
+        if (progress) {
+            progress(uploadProgress.completedUnitCount/uploadProgress.totalUnitCount);
+        }
+    } completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+        if (error) {
+            if (failure) {
+                failure(error);
+            }
+        }else{
+            if (success) {
+                success(YES, @"", responseObject);
+            }
+        }
+    }];
+    
+    [task resume];
 }
 
 /**

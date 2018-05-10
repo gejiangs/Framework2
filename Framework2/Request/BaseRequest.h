@@ -37,6 +37,7 @@ typedef void(^requestComplete)();
 
 @interface BaseRequest : NSObject
 
+#pragma mark - 网络GET\POST请求
 /**
  *  http get请求
  *
@@ -63,7 +64,7 @@ typedef void(^requestComplete)();
                   success:(successBlock)success
                   failure:(failureBlock)failure;
 
-
+#pragma mark - HTTP图片上传
 /**
  http 上传图片
 
@@ -79,6 +80,41 @@ typedef void(^requestComplete)();
                   success:(successBlock)success
                   failure:(failureBlock)failure;
 
+/**
+ http 上传图片
+ 
+ @param urlString url地址
+ @param params 参数
+ @param file 文件对象
+ @param progress 上传进度
+ @param success 成功block
+ @param failure 失败block
+ */
+-(void)uploadImageWithURL:(NSString *)urlString
+                   params:(NSDictionary *)params
+                     file:(RequestFileModel *)file
+                 progress:(progress)progress
+                  success:(successBlock)success
+                  failure:(failureBlock)failure;
+
+/**
+ http 上传图片
+ 
+ @param urlString url地址
+ @param params 参数
+ @param files 文件对象数组
+ @param progress 上传进度
+ @param success 成功block
+ @param failure 失败block
+ */
+-(void)uploadImageWithURL:(NSString *)urlString
+                   params:(NSDictionary *)params
+                    files:(NSArray<RequestFileModel*> *)files
+                 progress:(progress)progress
+                  success:(successBlock)success
+                  failure:(failureBlock)failure;
+
+#pragma mark - http网络并行请求对象
 /**
  http Get 请求对象
 
