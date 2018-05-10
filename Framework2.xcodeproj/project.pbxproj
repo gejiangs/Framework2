@@ -13,6 +13,7 @@
 		AD15618C1EAEE1C00086B874 /* ClircleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD15618B1EAEE1C00086B874 /* ClircleVC.m */; };
 		AD1C2BD21E6E4C7300328DD5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1C2BD11E6E4C7300328DD5 /* HomeViewController.m */; };
 		AD1C2BD51E6E4D3500328DD5 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1C2BD41E6E4D3500328DD5 /* DownloadManager.m */; };
+		AD284FCC20A2CA1A002740C9 /* MultilineRequestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD284FCB20A2CA1A002740C9 /* MultilineRequestVC.m */; };
 		AD28C7D91FAAF51B0065A455 /* TouchIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD28C7D81FAAF51B0065A455 /* TouchIDViewController.m */; };
 		AD381CE21E8107D300AEA234 /* CollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD381CE11E8107D300AEA234 /* CollectionVC.m */; };
 		AD381CE51E81080000AEA234 /* HomeCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD381CE41E81080000AEA234 /* HomeCollectionView.m */; };
@@ -94,6 +95,8 @@
 		AD1C2BD11E6E4C7300328DD5 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		AD1C2BD31E6E4D3500328DD5 /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
 		AD1C2BD41E6E4D3500328DD5 /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
+		AD284FCA20A2CA1A002740C9 /* MultilineRequestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultilineRequestVC.h; sourceTree = "<group>"; };
+		AD284FCB20A2CA1A002740C9 /* MultilineRequestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultilineRequestVC.m; sourceTree = "<group>"; };
 		AD28C7D71FAAF51B0065A455 /* TouchIDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchIDViewController.h; sourceTree = "<group>"; };
 		AD28C7D81FAAF51B0065A455 /* TouchIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchIDViewController.m; sourceTree = "<group>"; };
 		AD381CE01E8107D300AEA234 /* CollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionVC.h; sourceTree = "<group>"; };
@@ -372,6 +375,8 @@
 				AD4E00BD1ECB01D200AB683B /* VideoVC3.m */,
 				AD28C7D71FAAF51B0065A455 /* TouchIDViewController.h */,
 				AD28C7D81FAAF51B0065A455 /* TouchIDViewController.m */,
+				AD284FCA20A2CA1A002740C9 /* MultilineRequestVC.h */,
+				AD284FCB20A2CA1A002740C9 /* MultilineRequestVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -716,6 +721,7 @@
 				EE6100121DABDE95004D0DD9 /* UIActionSheet+Utils.m in Sources */,
 				ADFBE43A1E6FF15900E6585C /* AdRequest.m in Sources */,
 				EE6100211DABDE95004D0DD9 /* JamPickerView.m in Sources */,
+				AD284FCC20A2CA1A002740C9 /* MultilineRequestVC.m in Sources */,
 				EE6100221DABDE95004D0DD9 /* LockView.m in Sources */,
 				EE6100201DABDE95004D0DD9 /* ComboxPickerView.m in Sources */,
 				EE6100171DABDE95004D0DD9 /* UILabel+Utils.m in Sources */,
